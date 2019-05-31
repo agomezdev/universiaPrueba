@@ -35,12 +35,12 @@ export class BuscadorComponent implements OnInit {
 
   //funcion que busca resultados en el back
   search() {
+    this.liveTemplate = this.lista;
     this.buscadorService
       .searchUser(this.searchForm.controls["searchInput"].value)
       .subscribe(res => {
         this.users = res.filter(user => {
           //esta logica debe ir en el servicio
-          console.log(user.profile.name);
           return (
             user.profile.name == this.searchForm.controls["searchInput"].value
           );
@@ -50,7 +50,6 @@ export class BuscadorComponent implements OnInit {
   }
 
   pasarElegido(event) {
-    console.log("elegido", event);
     this.selectUser = event;
     this.liveTemplate = this.detalle;
   }
