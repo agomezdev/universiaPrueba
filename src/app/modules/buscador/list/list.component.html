@@ -1,0 +1,9 @@
+<section>
+  <ul>
+    <li *ngFor="let user of lista" class="item" (click)="select(user)">
+      <span [innerHtml]="user.profile.name"></span>
+      | comentarios: <span [innerHtml]="user.comments.length"></span> | posts:
+      <span [innerHtml]="user.posts.length"></span>
+    </li>
+  </ul>
+</section>

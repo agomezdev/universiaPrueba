@@ -1,0 +1,17 @@
+<section class="itemWrapper">
+  <h2>El usuario elegido es <span [innerHtml]="select.profile.name"></span></h2>
+  <div>El usuario elegido tiene {{ select.comments.length }} comentarios</div>
+  <ul>
+    <li *ngFor="let comment of select.comments">
+      <span [innerHtml]="comment.id" class="number"></span>
+      <span [innerHtml]="comment.body"></span>
+    </li>
+  </ul>
+  <div>El usuario elegido tiene {{ select.posts.length }} comentarios</div>
+  <ul>
+    <li *ngFor="let post of select.posts">
+      <span [innerHtml]="post.id" class="number"></span>
+      <span [innerHtml]="post.title"></span>
+    </li>
+  </ul>
+</section>

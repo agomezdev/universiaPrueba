@@ -1,0 +1,27 @@
+.itemWrapper {
+  width: 100%;
+  height: auto;
+  background-color: goldenrod;
+  color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.itemWrapper * {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  border-bottom: 2px solid white;
+  font-size: 3rem;
+}
+
+.number {
+  padding-right: 2rem;
+  font-size: 3rem;
+}
+li {
+  list-style-type: none;
+}

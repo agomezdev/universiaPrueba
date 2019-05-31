@@ -1,0 +1,29 @@
+<form [formGroup]="searchForm" novalidate>
+  <section class="wrapper">
+    <input
+      class="search"
+      formControlName="searchInput"
+      name="searchInput"
+      type="search"
+      value="search"
+    />
+    <button
+      class="btn"
+      type="submit"
+      [ngClass]="{ disabled: !searchForm.valid }"
+      [disabled]="!searchForm.valid"
+      (click)="search()"
+    >
+      <span>Buscar</span>
+    </button>
+  </section>
+
+  <ng-template #list>
+    <app-list [lista]="users" (onSelect)="pasarElegido($event)"></app-list>
+  </ng-template>
+  <ng-template #item>
+    <app-item [select]="selectUser"></app-item>
+  </ng-template>
+
+  <ng-container *ngTemplateOutlet="liveTemplate"></ng-container>
+</form>
