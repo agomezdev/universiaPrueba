@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 })
 export class ListComponent implements OnInit {
   @Input() lista: any;
-  @Output() onSelect = new EventEmitter<any>;
+  @Output() onSelect = new EventEmitter<any>();
   constructor() {}
 
   ngOnInit() {
@@ -17,5 +17,4 @@ export class ListComponent implements OnInit {
   select(user: any) {
     this.onSelect.emit(user);
   }
-
 }
